@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verifica 2 – VLAN, Routing, DHCP, DNS, Cloud</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f2f5;color:#1a1a1a;line-height:1.6;padding:20px}.container{max-width:900px;margin:0 auto}h1{text-align:center;color:#2c3e50;font-size:1.6em;margin-bottom:4px}.sub{text-align:center;color:#7f8c8d;margin-bottom:25px;font-style:italic}.sec{background:#fff;border-radius:12px;padding:22px 28px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.08)}.sec h2{color:#8e44ad;border-bottom:2px solid #9b59b6;padding-bottom:6px;margin-bottom:16px;font-size:1.2em}.q{margin-bottom:18px;padding:10px;background:#f8f9fa;border-radius:6px;border-left:4px solid #9b59b6}.q p{font-weight:600;margin-bottom:6px}.q textarea,.q input{width:100%;min-height:70px;padding:10px;border:1px solid #dcdde1;border-radius:6px;font-family:inherit;font-size:.95em;resize:vertical}.q textarea:focus,.q input:focus{outline:none;border-color:#9b59b6;box-shadow:0 0 0 2px rgba(155,89,182,.2)}.btns{text-align:center;margin:25px 0 50px}.btns button{padding:12px 28px;font-size:1em;border:none;border-radius:8px;cursor:pointer;margin:0 8px;font-weight:600}.btn-save{background:#27ae60;color:#fff}.btn-save:hover{background:#219a52}.btn-print{background:#8e44ad;color:#fff}.btn-print:hover{background:#7d3c98}.btn-reset{background:#e74c3c;color:#fff}.btn-reset:hover{background:#c0392b}.saved{text-align:center;color:#27ae60;font-weight:600;margin-top:8px;display:none}.q.marked{background:#fdebd0;border-left-color:#f39c12}@media print{body{background:#fff;padding:0}.sec{box-shadow:none;break-inside:avoid;border:1px solid #ddd}.btns{display:none}textarea{border:1px solid #ccc;min-height:50px}}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🌐 Verifica 2 — VLAN, Routing, DHCP, DNS, Cloud, Virtualizzazione</h1>
+<p class="sub">Basato su 2-vlan-routing-dhcp-dns-cloud.md</p>
+
+<div class="sec"><h2>1. VLAN</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>1. Cos'è una VLAN? Elenca 3 motivi per cui si usa.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>2. Differenza tra porta access e porta trunk. Su quale tipo di porta i frame hanno il tag 802.1Q?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>3. Cos'è il tagging 802.1Q? Cosa aggiunge al frame Ethernet e quanti bit ha il VID?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>4. Cos'è la VLAN nativa? Perché per sicurezza si cambia dal default (VLAN 1)?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>5. Spiega il router-on-a-stick. Per cosa si usa? Disegna lo schema a parole.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>6. Progetta VLAN per un'azienda con: 80 dipendenti cablati, 15 server, Wi-Fi aziendale (30 disp.), ospiti (60 disp.). Definisci VLAN ID, nome, CIDR, gateway per ciascuna.</p><textarea></textarea></div>
+</div>
+
+<div class="sec"><h2>2. Routing</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>7. Cos'è una tabella di routing? Quali informazioni contiene ogni entry?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>8. Differenza tra routing statico e dinamico. Pro e contro di ciascuno. Quando usi l'uno o l'altro?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>9. Cos'è la default route (0.0.0.0/0)? A cosa serve e dove punta tipicamente?</p><textarea></textarea></div>
+</div>
+
+<div class="sec"><h2>3. DHCP</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>10. Spiega lo scambio DORA del DHCP. Cosa fa il client in ciascuna fase?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>11. Elenca almeno 5 parametri che un server DHCP può assegnare a un client.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>12. Cos'è il DHCP Relay? Perché serve in una rete con più VLAN?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>13. Cos'è il DHCP Snooping e da quale attacco protegge?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>14. Come configureresti DHCP in una rete con 4 VLAN diverse?</p><textarea></textarea></div>
+</div>
+
+<div class="sec"><h2>4. DNS</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>15. Quali sono i 4 tipi di server DNS (root, TLD, authoritative, resolver)? Cosa fa ciascuno?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>16. Elenca e spiega i record DNS: A, AAAA, CNAME, MX, NS, PTR, TXT.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>17. Descrivi la risoluzione DNS passo passo: un client chiede l'IP di www.esempio.it.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>18. Nella seconda prova: come posizioni i server DNS (primario e secondario)? Cosa significa "forwarding DNS"?</p><textarea></textarea></div>
+</div>
+
+<div class="sec"><h2>5. Cloud e Virtualizzazione</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>19. Spiega IaaS, PaaS, SaaS. Per ciascuno fai un esempio e indica cosa gestisce il provider e cosa gestisci tu.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>20. Differenza tra Public, Private e Hybrid Cloud.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>21. Hypervisor Type 1 vs Type 2: differenza ed esempi.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>22. VM vs Container: 4 differenze chiave. Quando usi una VM e quando un container?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>23. Edge Computing vs Cloud Computing: differenza principale, latenza, casi d'uso.</p><textarea></textarea></div>
+</div>
+
+<div class="btns">
+<button class="btn-save" onclick="save()">💾 Salva</button>
+<button class="btn-save" onclick="exportTxt()">📥 Esporta .txt</button>
+<button class="btn-print" onclick="window.print()">🖨️ Stampa</button>
+<button class="btn-reset" onclick="if(confirm('Cancellare?'))resetAll()">🗑️ Resetta</button>
+</div>
+<p class="saved" id="msg">✅ Salvato</p>
+</div>
+<script>
+const K='v2sr';
+function save(){const a=[];document.querySelectorAll('.q').forEach(q=>{const t=q.querySelector('textarea,input');a.push(t?t.value:'')});localStorage.setItem(K,JSON.stringify(a));document.getElementById('msg').style.display='block';setTimeout(()=>document.getElementById('msg').style.display='none',2000)}
+function load(){const d=localStorage.getItem(K);if(!d)return;JSON.parse(d).forEach((v,i)=>{const t=document.querySelectorAll('.q textarea,.q input')[i];if(t)t.value=v})}
+function resetAll(){document.querySelectorAll('.q textarea,.q input').forEach(t=>t.value='');localStorage.removeItem(K)}
+function exportTxt(){let x='';document.querySelectorAll('.q').forEach((q,i)=>{const t=q.querySelector('textarea,input');const l=q.querySelector('p');if(t&&l){x+='=== '+l.textContent.trim()+' ===\n'+t.value+'\n\n'}});const b=new Blob([x],{type:'text/plain'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download='risposte-sistemi2.txt';a.click();URL.revokeObjectURL(u)}
+setInterval(save,15000);window.addEventListener('load',load);
+</script>
+</body>
+</html>

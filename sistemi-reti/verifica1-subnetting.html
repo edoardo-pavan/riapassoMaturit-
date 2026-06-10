@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verifica 1 – Subnetting, VLSM, Cablaggio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f2f5;color:#1a1a1a;line-height:1.6;padding:20px}.container{max-width:900px;margin:0 auto}h1{text-align:center;color:#2c3e50;font-size:1.6em;margin-bottom:4px}.sub{text-align:center;color:#7f8c8d;margin-bottom:25px;font-style:italic}.sec{background:#fff;border-radius:12px;padding:22px 28px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.08)}.sec h2{color:#2980b9;border-bottom:2px solid #3498db;padding-bottom:6px;margin-bottom:16px;font-size:1.2em}.q{margin-bottom:18px;padding:10px;background:#f8f9fa;border-radius:6px;border-left:4px solid #3498db}.q p{font-weight:600;margin-bottom:6px}.q textarea,.q input[type="text"]{width:100%;min-height:70px;padding:10px;border:1px solid #dcdde1;border-radius:6px;font-family:inherit;font-size:.95em;resize:vertical}.q textarea:focus,.q input:focus{outline:none;border-color:#3498db;box-shadow:0 0 0 2px rgba(52,152,219,.2)}.btns{text-align:center;margin:25px 0 50px}.btns button{padding:12px 28px;font-size:1em;border:none;border-radius:8px;cursor:pointer;margin:0 8px;font-weight:600;transition:background .2s}.btn-save{background:#27ae60;color:#fff}.btn-save:hover{background:#219a52}.btn-print{background:#2980b9;color:#fff}.btn-print:hover{background:#2471a3}.btn-reset{background:#e74c3c;color:#fff}.btn-reset:hover{background:#c0392b}.saved{text-align:center;color:#27ae60;font-weight:600;margin-top:8px;display:none}.q.marked{background:#fdebd0;border-left-color:#f39c12}@media print{body{background:#fff;padding:0}.sec{box-shadow:none;break-inside:avoid;border:1px solid #ddd}.btns{display:none}textarea{border:1px solid #ccc;background:#fff;min-height:50px}}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🌐 Verifica 1 — Subnetting, VLSM, Indirizzamento, Cablaggio</h1>
+<p class="sub">Basato su 1-subnetting-vlsm-cablaggio.md | ⚠️ Giorno più importante: se sbagli qui, la traccia non parte</p>
+
+<div class="sec"><h2>1. IPv4 e Subnet Mask</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>1. Da quanti bit è composto un indirizzo IPv4? Come viene scritto (notazione)?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>2. Elenca le classi A, B, C con i loro range, subnet mask di default e notazione CIDR.</p><textarea placeholder="Classe A: 0-127, /8, 255.0.0.0 ..."></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>3. Quali sono i 3 range di indirizzi privati (RFC 1918)? Scrivi range e CIDR.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>4. Cos'è la notazione CIDR? Scrivi l'equivalente CIDR di 255.255.255.192 e 255.255.254.0.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>5. Perché nel calcolo degli host si sottrae 2? Cosa rappresentano quei due indirizzi?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>6. Quanti host può contenere una rete /27? E una /22? (Mostra i calcoli)</p><textarea placeholder="/27: 2^(32-27)-2 = ..."></textarea></div>
+</div>
+
+<div class="sec"><h2>2. Subnetting a maschera fissa</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>7. Hai la rete 192.168.1.0/24. Devi creare 4 sottoreti di uguali dimensioni. Quanti bit prendi? Qual è il nuovo prefisso? Quanti host per sottorete?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>8. (Stesso esercizio) Scrivi la tabella completa con: indirizzo di rete, range host, broadcast per ciascuna delle 4 sottoreti.</p><textarea placeholder="Sottorete 1: 192.168.1.0/26 ..."></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>9. Hai 10.0.0.0/16. Devi creare 8 sottoreti di uguali dimensioni. Qual è il nuovo prefisso? Subnet mask? Host per sottorete?</p><textarea></textarea></div>
+</div>
+
+<div class="sec"><h2>3. VLSM — Variable Length Subnet Mask</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>10. Cos'è il VLSM e in cosa si differenzia dal subnetting a maschera fissa? Perché si ordinano i reparti dal più grande al più piccolo?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>11. ESERCIZIO VLSM: hai 10.0.0.0/16. Devi creare sottoreti per: Reparto A (1000 host), Reparto B (500 host), Reparto C (200 host), Reparto D (50 host). Per ciascuno: trova il prefisso, la subnet mask, l'indirizzo di rete e il broadcast.</p><textarea placeholder="A (1000 host): 2^10-2=1022 ≥1000, /22, 255.255.252.0, 10.0.0.0/22, broadcast 10.0.3.255..."></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>12. ESERCIZIO VLSM: hai 192.168.50.0/24. Devi creare sottoreti per: Uffici (60 host), Server (25 host), Management (10 host), Link punto-punto tra due router (2 host). Applica VLSM.</p><textarea placeholder="Uffici (60): 2^6-2=62 ≥60, /26, 255.255.255.192, 192.168.50.0/26, broadcast .63..."></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>13. ESERCIZIO COMPLETO: azienda con 2 sedi, hai 172.16.0.0/16. Sede A: 200 host uffici + 40 server + 10 DMZ. Sede B: 80 host uffici + 20 ospiti Wi-Fi. Link VPN tra le due sedi (/30). Applica VLSM completo con tabella.</p><textarea placeholder="Ordina: A Uffici (200) → B Uffici (80) → A Server (40) → B Ospiti (20) → A DMZ (10) → VPN (2)..."></textarea></div>
+</div>
+
+<div class="sec"><h2>4. Cablaggio Strutturato</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>14. Elenca e descrivi i 5 componenti del cablaggio strutturato (dall'area di lavoro all'ingresso di edificio).</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>15. Qual è la distanza massima del cavo orizzontale? Perché proprio 90 metri (+ 10 di patch cord)?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>16. Differenza tra UTP e STP/FTP. In quali ambienti usi uno o l'altro?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>17. Differenza tra fibra monomodale e multimodale (diametro nucleo, distanza,光源, costo, uso tipico).</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>18. Cosa scriveresti nella seconda prova per descrivere il cablaggio di un edificio di 3 piani con 50 postazioni per piano?</p><textarea></textarea></div>
+</div>
+
+<div class="sec"><h2>5. Tabella riepilogativa</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>19. Completa: /24 = mask ___, host ___ ; /26 = mask ___, host ___ ; /28 = mask ___, host ___ ; /30 = mask ___, host ___</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>20. Quali categorie di cavo Ethernet useresti per: a) ufficio standard 1 Gbps, b) data center 10 Gbps, c) backbone tra piani di un edificio</p><textarea></textarea></div>
+</div>
+
+<div class="btns">
+<button class="btn-save" onclick="save()">💾 Salva</button>
+<button class="btn-save" onclick="exportTxt()">📥 Esporta .txt</button>
+<button class="btn-print" onclick="window.print()">🖨️ Stampa</button>
+<button class="btn-reset" onclick="if(confirm('Cancellare?'))resetAll()">🗑️ Resetta</button>
+</div>
+<p class="saved" id="msg">✅ Salvato</p>
+</div>
+<script>
+const K='v1sr';
+function save(){const a=[];document.querySelectorAll('.q').forEach(q=>{const t=q.querySelector('textarea,input');a.push(t?t.value:'')});localStorage.setItem(K,JSON.stringify(a));const m=document.getElementById('msg');m.style.display='block';setTimeout(()=>m.style.display='none',2000)}
+function load(){const d=localStorage.getItem(K);if(!d)return;JSON.parse(d).forEach((v,i)=>{const t=document.querySelectorAll('.q textarea,.q input')[i];if(t)t.value=v})}
+function resetAll(){document.querySelectorAll('.q textarea,.q input').forEach(t=>t.value='');localStorage.removeItem(K)}
+function exportTxt(){let x='';document.querySelectorAll('.q').forEach((q,i)=>{const t=q.querySelector('textarea,input');const l=q.querySelector('p');if(t&&l){x+='=== '+l.textContent.trim()+' ===\n'+t.value+'\n\n'}});const b=new Blob([x],{type:'text/plain'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download='risposte-sistemi1.txt';a.click();URL.revokeObjectURL(u)}
+setInterval(save,15000);window.addEventListener('load',load);
+</script>
+</body>
+</html>

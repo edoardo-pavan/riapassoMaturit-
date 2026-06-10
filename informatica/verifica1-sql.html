@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Verifica 1 Info – SQL e Normalizzazione</title>
+<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f2f5;color:#1a1a1a;line-height:1.6;padding:20px}.c{max-width:900px;margin:0 auto}h1{text-align:center;color:#2c3e50;font-size:1.5em;margin-bottom:4px}.sub{text-align:center;color:#7f8c8d;margin-bottom:25px;font-style:italic}.sec{background:#fff;border-radius:12px;padding:22px 28px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.08)}.sec h2{color:#2980b9;border-bottom:2px solid #3498db;padding-bottom:6px;margin-bottom:16px;font-size:1.2em}.q{margin-bottom:18px;padding:10px;background:#f8f9fa;border-radius:6px;border-left:4px solid #3498db}.q p{font-weight:600;margin-bottom:6px}.q textarea{width:100%;min-height:70px;padding:10px;border:1px solid #dcdde1;border-radius:6px;font-family:inherit;font-size:.95em;resize:vertical}.q textarea:focus{outline:none;border-color:#3498db;box-shadow:0 0 0 2px rgba(52,152,219,.2)}.btns{text-align:center;margin:25px 0 50px}.btns button{padding:12px 28px;font-size:1em;border:none;border-radius:8px;cursor:pointer;margin:0 8px;font-weight:600}.btn-save{background:#27ae60;color:#fff}.btn-save:hover{background:#219a52}.btn-print{background:#2980b9;color:#fff}.btn-reset{background:#e74c3c;color:#fff}.saved{text-align:center;color:#27ae60;font-weight:600;margin-top:8px;display:none}.q.marked{background:#fdebd0;border-left-color:#f39c12}@media print{body{background:#fff;padding:0}.sec{box-shadow:none;break-inside:avoid;border:1px solid #ddd}.btns{display:none}textarea{border:1px solid #ccc;min-height:50px}}</style></head><body>
+<div class="c"><h1>💾 Verifica 1 – SQL e Normalizzazione</h1><p class="sub">Basato su 1-sql-normalizzazione.md</p>
+<div class="sec"><h2>1. Fondamenti SQL</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>1. Differenza tra DDL, DML, DCL, TCL. Un esempio di istruzione per ciascuna.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>2. Cos'è una FOREIGN KEY? Spiega ON DELETE CASCADE e ON DELETE SET NULL.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>3. Scrivi una CREATE TABLE per una tabella Prodotti con: id PK autoincrement, nome NOT NULL, prezzo DECIMAL(8,2), categoria VARCHAR(50), data_inserimento con DEFAULT CURRENT_TIMESTAMP.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>4. Differenza tra ALTER TABLE, DROP TABLE e TRUNCATE TABLE.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>5. Scrivi una INSERT che inserisce 3 prodotti in una volta sola.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>6. Scrivi una SELECT che restituisce nome e prezzo dei prodotti con prezzo tra 10 e 50 euro, ordinati per prezzo decrescente.</p><textarea></textarea></div>
+</div>
+<div class="sec"><h2>2. JOIN</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>7. Differenza tra INNER JOIN e LEFT JOIN. Fai un esempio concreto con Clienti e Ordini.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>8. Cos'è un SELF JOIN? Quando si usa? Esempio.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>9. Scrivi una query che restituisce il nome di ogni cliente e il totale speso (SUM importo ordini), incluso chi non ha ordini (totale = 0).</p><textarea></textarea></div>
+</div>
+<div class="sec"><h2>3. GROUP BY, HAVING, Subquery, Viste</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>10. Qual è l'ordine corretto delle clausole SQL? (SELECT, FROM, JOIN, WHERE, GROUP BY, HAVING, ORDER BY, LIMIT)</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>11. Differenza tra WHERE e HAVING. Dove si applica ciascuno?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>12. Cosa sono le funzioni di aggregazione? Elencane 5.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>13. Cos'è una subquery? Fai un esempio di subquery scalare (nel SELECT) e una nel WHERE.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>14. Cos'è una VIEW? A cosa serve? Vantaggi?</p><textarea></textarea></div>
+</div>
+<div class="sec"><h2>4. Procedure, Funzioni, Trigger, Eventi</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>15. Differenza tra Stored Procedure e Stored Function. (chiamata, valore di ritorno, uso)</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>16. Cos'è un TRIGGER? Su quali eventi può scattare? Cosa sono NEW e OLD?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>17. Cos'è uno Scheduled Event? Scrivi un esempio che pulisce una tabella Log ogni giorno.</p><textarea></textarea></div>
+</div>
+<div class="sec"><h2>5. Transazioni, DBA, Normalizzazione</h2>
+<div class="q" onclick="this.classList.toggle('marked')"><p>18. Cosa significa ACID? Spiega ogni lettera con un esempio.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>19. Ruolo del DBA: elenca almeno 4 compiti principali.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>20. GRANT e REVOKE: a cosa servono? Scrivi un esempio di GRANT e uno di REVOKE.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>21. Come fai il backup di un database MySQL/MariaDB? E il restore?</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>22. Spiega 1NF, 2NF, 3NF con un esempio di violazione per ciascuna.</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>23. Normalizza: tabella ORDINI(id, data, cliente, citta, provincia, prodotto, prezzo, qta).</p><textarea></textarea></div>
+<div class="q" onclick="this.classList.toggle('marked')"><p>24. Algebra relazionale: cosa sono selezione (σ) e proiezione (π)? Equivalente SQL?</p><textarea></textarea></div>
+</div>
+<div class="btns"><button class="btn-save" onclick="save()">💾 Salva</button><button class="btn-save" onclick="exp()">📥 Esporta .txt</button><button class="btn-print" onclick="window.print()">🖨️ Stampa</button><button class="btn-reset" onclick="if(confirm('Cancellare?'))rst()">🗑️ Resetta</button></div><p class="saved" id="m">✅ Salvato</p></div>
+<script>const K='v1info';function save(){const a=[];document.querySelectorAll('.q textarea').forEach(t=>a.push(t.value));localStorage.setItem(K,JSON.stringify(a));document.getElementById('m').style.display='block';setTimeout(()=>document.getElementById('m').style.display='none',2000)}function load(){const d=localStorage.getItem(K);if(!d)return;JSON.parse(d).forEach((v,i)=>{const t=document.querySelectorAll('.q textarea')[i];if(t)t.value=v})}function rst(){document.querySelectorAll('.q textarea').forEach(t=>t.value='');localStorage.removeItem(K)}function exp(){let x='';document.querySelectorAll('.q').forEach((q,i)=>{const t=q.querySelector('textarea');const l=q.querySelector('p');if(t&&l){x+='=== '+l.textContent.trim()+' ===\n'+t.value+'\n\n'}});const b=new Blob([x],{type:'text/plain'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download='risposte-info1.txt';a.click();URL.revokeObjectURL(u)}setInterval(save,15000);window.addEventListener('load',load)</script></body></html>
