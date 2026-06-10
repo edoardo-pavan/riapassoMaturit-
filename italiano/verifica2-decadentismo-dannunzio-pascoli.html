@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verifica 2 – Decadentismo, D'Annunzio, Pascoli</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; padding: 20px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1 { text-align: center; color: #2c3e50; margin-bottom: 8px; font-size: 1.8em; }
+    .subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-style: italic; }
+    .section { background: #fff; border-radius: 12px; padding: 25px 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .section h2 { color: #8e44ad; border-bottom: 2px solid #9b59b6; padding-bottom: 8px; margin-bottom: 20px; font-size: 1.3em; }
+    .question { margin-bottom: 20px; padding: 12px; background: #f8f9fa; border-radius: 6px; border-left: 4px solid #9b59b6; }
+    .question p { font-weight: 600; margin-bottom: 8px; }
+    .question textarea { width: 100%; min-height: 80px; padding: 10px; border: 1px solid #dcdde1; border-radius: 6px; font-family: inherit; font-size: 0.95em; resize: vertical; }
+    .question textarea:focus { outline: none; border-color: #9b59b6; box-shadow: 0 0 0 2px rgba(155,89,182,0.2); }
+    .question input[type="text"] { width: 100%; padding: 10px; border: 1px solid #dcdde1; border-radius: 6px; font-family: inherit; font-size: 0.95em; }
+    .question input[type="text"]:focus { outline: none; border-color: #9b59b6; box-shadow: 0 0 0 2px rgba(155,89,182,0.2); }
+    .hint { font-size: 0.8em; color: #95a5a6; margin-top: 4px; }
+    .btns { text-align: center; margin: 30px 0 60px; }
+    .btns button { padding: 12px 30px; font-size: 1em; border: none; border-radius: 8px; cursor: pointer; margin: 0 10px; font-weight: 600; }
+    .btn-save { background: #27ae60; color: #fff; }
+    .btn-save:hover { background: #219a52; }
+    .btn-print { background: #8e44ad; color: #fff; }
+    .btn-print:hover { background: #7d3c98; }
+    .btn-reset { background: #e74c3c; color: #fff; }
+    .btn-reset:hover { background: #c0392b; }
+    .controls { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+    .controls button { padding: 8px 18px; font-size: 0.85em; border: 2px solid #bdc3c7; border-radius: 6px; cursor: pointer; background: #fff; }
+    .controls button.marked, .question.marked { background: #fdebd0; border-left-color: #f39c12; }
+    .saved-msg { text-align: center; color: #27ae60; font-weight: 600; margin-top: 10px; display: none; }
+    .danger-zone { background: #fff5f5; border: 2px dashed #e74c3c; }
+    .danger-zone h2 { color: #c0392b; border-bottom-color: #e74c3c; }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .section { box-shadow: none; break-inside: avoid; border: 1px solid #ddd; }
+        .btns, .controls { display: none; }
+        textarea, input[type="text"] { border: 1px solid #ccc; background: #fff; min-height: 60px; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>✍️ Verifica 2 — Decadentismo, D'Annunzio, Pascoli</h1>
+<p class="subtitle">Basato su: 2-decadentismo-dannunzio-pascoli.md | ⚠️ D'Annunzio è la sezione più probabile per l'orale</p>
+
+<div class="controls">
+    <button onclick="markAll(true)">✅ Segna tutti</button>
+    <button onclick="markAll(false)">⬜ Deseleziona tutti</button>
+</div>
+
+<!-- ============ SEZIONE 1: NIETZSCHE ============ -->
+<div class="section">
+<h2>1. NIETZSCHE e la caduta del Positivismo</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>1. Chi sono Apollo e Dioniso per Nietzsche? Perché l'Occidente ha "tagliato le ali" all'uomo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>2. Spiega la differenza tra "morale dei padroni" e "morale dei servi".</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>3. Chi è il Super-Uomo (Übermensch)? Quali sono le sue caratteristiche principali?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>4. (Ripetizione) Descrivi ancora il Super-Uomo di Nietzsche. Perché è consapevole della "falsità di ciò che ha intorno"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>5. Collegamento: come si collega il Super-Uomo di Nietzsche al Superuomo di D'Annunzio?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 2: BAUDELAIRE ============ -->
+<div class="section">
+<h2>2. BAUDELAIRE e I Fiori del Male</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>6. Cos'è lo spleen in Baudelaire? Da dove deriva il termine e cosa significa?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>7. Cosa significa "perdita dell'aureola"? Perché secondo Baudelaire il poeta l'ha persa?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>8. Analizza L'albatro: qual è la metafora centrale? Perché il poeta è come un albatro?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>9. Analizza Corrispondenze: cosa rappresenta la natura per Baudelaire? Cosa sono le sinestesie?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>10. (Ripetizione) Perché Baudelaire scrive per sé e non per vendere? Cosa significa che la sua poesia è "difficile"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>11. Perché Baudelaire è considerato il fondatore del Simbolismo e il padre della poesia moderna?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 3: SIMBOLISTI/DECADENTISMO ============ -->
+<div class="section">
+<h2>3. SIMBOLISTI, MALEDETTI, DECADENTISMO</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>12. Cosa sono i "poeti maledetti"? Chi sono i principali? In che anno esce l'antologia che li consacra?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>13. Chi è il poeta-veggente di Rimbaud? Cosa significa "sregolamento dei sensi"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>14. Da dove nasce il termine "Decadentismo"? Quale poesia di Verlaine ne è all'origine?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>15. Definisci: Dandy, Estetismo, Edonismo. Spiega le differenze tra i tre concetti.</p>
+<textarea placeholder="Dandy: ... / Estetismo: ... / Edonismo: ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>16. (Ripetizione) Spiega ancora chi è il dandy decadente e cosa significa "vita come opera d'arte".</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 4: D'ANNUNZIO ============ -->
+<div class="section">
+<h2>4. ⚠️ GABRIELE D'ANNUNZIO — Vita</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>17. Quando e dove nasce D'Annunzio? Perché vive male le sue origini?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>18. Che cos'è "Primo vere"? Quale stratagemma pubblicitario usò D'Annunzio per renderlo famoso?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>19. Descrivi le imprese di guerra di D'Annunzio: la Beffa di Buccari e il Volo su Vienna.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>20. Cosa fu l'Impresa di Fiume? Chi lo costrinse a ritirarsi e con quale trattato?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>21. Qual era il rapporto tra D'Annunzio e Mussolini? Perché Mussolini lo teneva "in gabbia dorata"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>22. (Ripetizione) Riassumi la vita di D'Annunzio in 5 tappe fondamentali.</p>
+<textarea placeholder="1) ... 2) ... 3) ... 4) ... 5) ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>23. Dove e quando muore D'Annunzio? Cos'è il Vittoriale degli Italiani?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 5: D'ANNUNZIO OPERE ============ -->
+<div class="section danger-zone">
+<h2>5. ⚠️⚠️ D'ANNUNZIO — OPERE (SEZIONE CRITICA PER L'ORALE)</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>24. Trama completa de Il Piacere. Chi è Andrea Sperelli? Chi sono Elena Muti e Maria Ferres?</p>
+<textarea placeholder="Scrivi qui la tua risposta (minimo 10 righe)..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>25. (Ripetizione) Racconta di nuovo la trama de Il Piacere. Non importa se ti ripeti: più scrivi, più fissi.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>26. Perché Andrea Sperelli è un INETTO mascherato da superuomo? Spiega.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>27. Analizza l'episodio dell'asta finale nel Piacere: cosa rappresenta? Perché Andrea odia i compratori? Cosa simboleggia l'armadio?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>28. Che ruolo ha Roma nel Piacere? Perché si può dire che Roma è la coprotagonista?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>29. Cosa sono Le Laudi? Quanti libri compongono il ciclo? Perché si chiamano così?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>30. Cos'è l'Alcyone? Qual è il tema principale? Cosa significa il sottotitolo "la tregua"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>31. Analizza La pioggia nel pineto: CONTENUTO (chi sono i personaggi, dove sono, cosa succede).</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>32. Analizza La pioggia nel pineto: FORMA (quali figure retoriche usa D'Annunzio per riprodurre i suoni della pioggia? onomatopee, allitterazioni, enjambement, ritornello).</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>33. Cos'è il PANISMO? Come si manifesta nella Pioggia nel pineto?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>34. (Ripetizione) Spiega di nuovo il panismo e la fusione uomo-natura nella Pioggia nel pineto.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>35. Chi è Pan? Perché D'Annunzio è attratto da questa divinità?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>36. Cosa significa "poeta-vate" in D'Annunzio? Qual è il suo ruolo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>37. Elenca i 5 nuclei della poetica dannunziana con una breve spiegazione per ciascuno.</p>
+<textarea placeholder="Superomismo: ... / Panismo: ... / Estetismo: ... / Poeta-vate: ... / Metamorfosi: ..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 6: PASCOLI ============ -->
+<div class="section">
+<h2>6. GIOVANNI PASCOLI — Vita e poetica</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>38. Quando e dove nasce Pascoli? Qual è il trauma che segna la sua vita? (data precisa)</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>39. Spiega cos'è il "nido" per Pascoli. Perché vive un legame morboso con le sorelle?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>40. Chi era il maestro di Pascoli? A chi succedette alla cattedra di Bologna?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>41. Cosa sostiene Pascoli ne Il Fanciullino? Perché il poeta deve "tirare fuori il suo fanciullo interiore"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>42. (Ripetizione) Perché il Fanciullino è l'opposto del Superuomo di D'Annunzio?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>43. Cosa sono le Myricae? Da dove deriva il titolo? Cosa sono le "tamerici"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>44. Qual è stata l'evoluzione politica di Pascoli? (dal socialismo giovanile all'articolo "La grande proletaria si è mossa")</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 7: PASCOLI LINGUAGGIO & POESIE ============ -->
+<div class="section">
+<h2>7. PASCOLI — Linguaggio analogico e analisi poesie</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>45. Elenca e spiega ALMENO 5 tecniche del linguaggio analogico di Pascoli (con esempi).</p>
+<textarea placeholder="1) Sinestesia: ... 2) Stile nominale: ... 3) Ipallage: ... 4) Salti logici: ... 5) ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>46. Analizza Lavandare: struttura, tema, cosa rappresenta l'aratro abbandonato.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>47. Analizza X Agosto: struttura simmetrica, parallelismo rondine/padre, "atomo opaco di male", circolarità.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>48. Analizza Novembre: illusione vs realtà, "estate fredda dei morti", ossimoro, stile nominale.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>49. Analizza Il lampo: chiasmo (cielo-terra / terra-cielo), ipallage, personificazione, stile nominale.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>50. (Ripetizione) Per ogni poesia di Pascoli (Lavandare, X Agosto, Novembre, Il lampo) scrivi il tema principale in UNA frase.</p>
+<textarea placeholder="Lavandare: ... / X Agosto: ... / Novembre: ... / Il lampo: ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>51. Perché Pascoli è un "innovatore incredibile" nonostante scriva di "piccole cose"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 8: CONFRONTO ============ -->
+<div class="section">
+<h2>8. CONFRONTO D'ANNUNZIO vs PASCOLI</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>52. COMPILA LA TABELLA: D'Annunzio vs Pascoli (figura poeta, vita, rapporto con natura, temi, stile, pubblico, donna, atteggiamento). Minimo 6 righe di confronto.</p>
+<textarea placeholder="D'Annunzio | Pascoli&#10;Poeta: superuomo | fanciullino&#10;Vita: ... | ...&#10;Natura: panismo | ...&#10;Temi: ... | ...&#10;Stile: ... | ...&#10;Pubblico: ... | ...&#10;Donna: ... | ...&#10;Atteggiamento: ... | ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>53. (Ripetizione) Quali sono le 3 differenze PIÙ IMPORTANTI tra D'Annunzio e Pascoli?</p>
+<textarea placeholder="1) ... 2) ... 3) ..."></textarea>
+</div>
+</div>
+
+<div class="btns">
+    <button class="btn-save" onclick="saveAnswers()">💾 Salva risposte (localStorage)</button>
+    <button class="btn-save" onclick="exportToFile()">📥 Esporta risposte (file .txt)</button>
+    <button class="btn-print" onclick="window.print()">🖨️ Stampa</button>
+    <button class="btn-reset" onclick="if(confirm('Cancellare tutte le risposte?'))resetAnswers()">🗑️ Resetta</button>
+</div>
+<p class="saved-msg" id="savedMsg">✅ Risposte salvate!</p>
+</div>
+
+<script>
+const STORAGE_KEY = 'verifica2_risposte';
+
+function saveAnswers() {
+    const answers = [];
+    document.querySelectorAll('.question').forEach((q) => {
+        const ta = q.querySelector('textarea, input[type="text"]');
+        if (ta) answers.push(ta.value);
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(answers));
+    const msg = document.getElementById('savedMsg');
+    msg.style.display = 'block';
+    setTimeout(() => msg.style.display = 'none', 2000);
+}
+
+function loadAnswers() {
+    const data = localStorage.getItem(STORAGE_KEY);
+    if (!data) return;
+    const answers = JSON.parse(data);
+    document.querySelectorAll('.question').forEach((q, i) => {
+        const ta = q.querySelector('textarea, input[type="text"]');
+        if (ta && answers[i]) ta.value = answers[i];
+    });
+}
+
+function resetAnswers() {
+    document.querySelectorAll('.question textarea, .question input[type="text"]').forEach(ta => ta.value = '');
+    localStorage.removeItem(STORAGE_KEY);
+}
+
+function toggleMark(el) { el.classList.toggle('marked'); }
+function markAll(state) { document.querySelectorAll('.question').forEach(q => { if (state) q.classList.add('marked'); else q.classList.remove('marked'); }); }
+
+function exportToFile() {
+    let txt = '';
+    document.querySelectorAll('.question').forEach((q, i) => {
+        const ta = q.querySelector('textarea, input[type="text"]');
+        const label = q.querySelector('p');
+        if (ta && label) {
+            txt += '===' + label.textContent.trim() + '===\n';
+            txt += ta.value + '\n\n';
+        }
+    });
+    const blob = new Blob([txt], {type: 'text/plain'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'risposte-verifica2.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+setInterval(saveAnswers, 15000);
+window.addEventListener('load', loadAnswers);
+</script>
+</body>
+</html>

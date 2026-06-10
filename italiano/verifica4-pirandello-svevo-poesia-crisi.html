@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verifica 4 – Pirandello, Svevo, Ungaretti, Saba</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; padding: 20px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1 { text-align: center; color: #2c3e50; margin-bottom: 8px; font-size: 1.8em; }
+    .subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-style: italic; }
+    .section { background: #fff; border-radius: 12px; padding: 25px 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .section h2 { color: #16a085; border-bottom: 2px solid #1abc9c; padding-bottom: 8px; margin-bottom: 20px; font-size: 1.3em; }
+    .question { margin-bottom: 20px; padding: 12px; background: #f8f9fa; border-radius: 6px; border-left: 4px solid #1abc9c; }
+    .question p { font-weight: 600; margin-bottom: 8px; }
+    .question textarea { width: 100%; min-height: 80px; padding: 10px; border: 1px solid #dcdde1; border-radius: 6px; font-family: inherit; font-size: 0.95em; resize: vertical; }
+    .question textarea:focus { outline: none; border-color: #1abc9c; box-shadow: 0 0 0 2px rgba(26,188,156,0.2); }
+    .question input[type="text"] { width: 100%; padding: 10px; border: 1px solid #dcdde1; border-radius: 6px; font-family: inherit; font-size: 0.95em; }
+    .question input[type="text"]:focus { outline: none; border-color: #1abc9c; box-shadow: 0 0 0 2px rgba(26,188,156,0.2); }
+    .btns { text-align: center; margin: 30px 0 60px; }
+    .btns button { padding: 12px 30px; font-size: 1em; border: none; border-radius: 8px; cursor: pointer; margin: 0 10px; font-weight: 600; }
+    .btn-save { background: #27ae60; color: #fff; }
+    .btn-save:hover { background: #219a52; }
+    .btn-print { background: #16a085; color: #fff; }
+    .btn-print:hover { background: #138d75; }
+    .btn-reset { background: #e74c3c; color: #fff; }
+    .btn-reset:hover { background: #c0392b; }
+    .controls { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+    .controls button { padding: 8px 18px; font-size: 0.85em; border: 2px solid #bdc3c7; border-radius: 6px; cursor: pointer; background: #fff; }
+    .question.marked { background: #fdebd0; border-left-color: #f39c12; }
+    .saved-msg { text-align: center; color: #27ae60; font-weight: 600; margin-top: 10px; display: none; }
+    .danger-zone { background: #fff5f5; border: 2px dashed #e74c3c; }
+    .danger-zone h2 { color: #c0392b; border-bottom-color: #e74c3c; }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .section { box-shadow: none; break-inside: avoid; border: 1px solid #ddd; }
+        .btns, .controls { display: none; }
+        textarea, input[type="text"] { border: 1px solid #ccc; background: #fff; min-height: 60px; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>✍️ Verifica 4 — Pirandello, Svevo, Ungaretti, Saba</h1>
+<p class="subtitle">Basato su: 4-pirandello-svevo-poesia-crisi.md | Sezione più lunga — copre metà programma</p>
+
+<div class="controls">
+    <button onclick="markAll(true)">✅ Segna tutti</button>
+    <button onclick="markAll(false)">⬜ Deseleziona tutti</button>
+</div>
+
+<!-- ============ SEZIONE 1: PIRANDELLO BIO ============ -->
+<div class="section">
+<h2>1. LUIGI PIRANDELLO — Vita</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>1. Dove e quando nasce Pirandello? Perché si laurea a Bonn e non a Roma?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>2. Quale evento traumatico colpisce la famiglia Pirandello nel 1903? Quali conseguenze ha sulla moglie e sulla sua opera?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>3. In che anno pubblica Il Fu Mattia Pascal? E L'Umorismo? Quando inizia la stagione teatrale?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>4. Qual era il rapporto di Pirandello col fascismo? Perché appoggiò Mussolini? Cosa ottenne in cambio?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>5. In che anno e per quale motivo Pirandello riceve il Premio Nobel? Quando muore?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 2: PIRANDELLO UMORISMO ============ -->
+<div class="section">
+<h2>2. PIRANDELLO — L'Umorismo, Forma/Vita</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>6. Spiega la differenza tra COMICO e UMORISTICO usando l'esempio della "vecchia imbellettata".</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>7. Cosa significa "avvertimento del contrario" e "sentimento del contrario"?</p>
+<textarea placeholder="Avvertimento: ... / Sentimento: ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>8. Spiega il concetto di FORMA e VITA in Pirandello. Perché sono in conflitto?</p>
+<textarea placeholder="Forma: ... / Vita: ... / Conflitto: ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>9. Cosa significa "maschera" per Pirandello? Perché tutti indossiamo una maschera?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>10. Chi è il "pazzo" secondo Pirandello? Perché il pazzo è incompatibile con la società?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>11. (Ripetizione) Spiega di nuovo Forma vs Vita con parole tue. Perché non si può vivere nella società senza forma?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>12. Cos'è il "CASO" in Pirandello? Perché è un elemento importante nell'arte della crisi?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 3: PIRANDELLO OPERE ============ -->
+<div class="section danger-zone">
+<h2>3. PIRANDELLO — Il Fu Mattia Pascal ⚠️</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>13. Trama completa del Fu Mattia Pascal. Chi è il protagonista? Cosa gli succede? Perché cambia nome? Come finisce?</p>
+<textarea placeholder="Scrivi qui la tua risposta (minimo 10 righe)..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>14. (Ripetizione) Racconta di nuovo la trama del Fu Mattia Pascal. Più dettagli = meglio è.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>15. Perché l'inizio e la fine del romanzo coincidono? Cosa indica questa struttura circolare?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>16. Perché Il Fu Mattia Pascal è un ANTI-ROMANZO? (almeno 3 ragioni)</p>
+<textarea placeholder="1) ... 2) ... 3) ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>17. Spiega "Maledetto sia Copernico!" nella Prefazione. Perché Pirandello usa l'ironia per parlare di Copernico?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>18. Cos'è "lo strappo nel cielo di carta"? Spiega la metafora di Oreste e Amleto. Cosa rappresenta il cielo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>19. Cos'è la "lanterninosofia"? Spiega la differenza tra lanternino e lanternone.</p>
+<textarea placeholder="Lanternino: ... / Lanternone: ... / Cosa significa: ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>20. Cosa pensa Pirandello della tecnologia (il tram elettrico, le macchine)? Perché le macchine illudono l'uomo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>21. Perché Adriano Meis non può vivere senza forma? Quali problemi concreti incontra?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>22. Perché Mattia Pascal, alla fine, visita la propria tomba? Cosa significa questo gesto?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 4: PIRANDELLO TEATRO ============ -->
+<div class="section">
+<h2>4. PIRANDELLO — Il treno ha fischiato + Teatro</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>23. Riassumi Il treno ha fischiato. Chi è Belluca? Cosa gli succede? Perché tutti pensano sia impazzito?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>24. Perché il fischio del treno è così importante per Belluca? Cosa rappresenta?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>25. Spiega il "teatro nel teatro" di Pirandello. Cosa significa che "tutti recitiamo"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>26. Sei personaggi in cerca d'autore: trama e innovazione scenica. Perché i personaggi arrivano dal pubblico?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>27. Quali sono i 4 PIANI DI REALTÀ nei Sei personaggi? Spiega ciascuno.</p>
+<textarea placeholder="1) ... 2) ... 3) ... 4) ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>28. Enrico IV: trama completa. Perché alla fine sceglie di restare pazzo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>29. (Ripetizione) Perché la follia, in Pirandello, è una forma di LIBERTÀ? Collega Enrico IV e Belluca.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 5: SVEVO ============ -->
+<div class="section danger-zone">
+<h2>5. ITALO SVEVO — Vita e Coscienza di Zeno ⚠️</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>30. Dove e quando nasce Svevo? Qual è il suo vero nome? Perché sceglie lo pseudonimo "Italo Svevo"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>31. Perché la "triestinità" è importante per Svevo? Cosa significa essere mitteleuropeo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>32. Chi era l'insegnante di inglese di Svevo? Quale ruolo ebbe nel successo della Coscienza di Zeno?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>33. Spiega la STRUTTURA della Coscienza di Zeno: quali capitoli la compongono? In che ordine sono?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>34. La Prefazione del Dottor S.: chi è il Dottor S.? Perché pubblica il diario? Perché tradisce il patto narrativo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>35. Cos'è il transfert e il contro-transfert nella Prefazione? Perché il Dottor S. è un cattivo psicoanalista?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>36. Il vizio del fumo: perché Zeno fuma? Cosa rappresentano le "ultime sigarette"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>37. Il rapporto col padre: perché Zeno odia e ama il padre? Cosa significa lo schiaffo finale?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>38. Il matrimonio di Zeno: chi sono Ada, Alberta e Augusta? Perché il matrimonio con Augusta funziona?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>39. Guido Speier: chi è? Cosa fa? Come muore? Perché Zeno arriva in ritardo al funerale?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>40. Chi è Carla? Che tipo di relazione ha con Zeno?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>41. Il finale — Psicoanalisi: Zeno si dichiara guarito. Perché? Cosa fa durante la guerra?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>42. Cos'è la teoria dell'ORDIGNO? Cosa significa che "l'ordigno crea la malattia e l'ammalato"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>43. (Ripetizione) Spiega di nuovo la teoria dell'ordigno e la profezia finale sulla bomba.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>44. Malattia e salute nella Coscienza di Zeno: chi è Sano e chi è Malato all'inizio? E alla fine?</p>
+<textarea placeholder="Inizio: Zeno=m, padre=s. / Fine: ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>45. Perché Zeno alla fine è diventato "quello che odiava"? È veramente guarito?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 6: CONFRONTO PIRANDELLO-SVEVO ============ -->
+<div class="section">
+<h2>6. CONFRONTO PIRANDELLO vs SVEVO</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>46. COMPILA LA TABELLA: Pirandello vs Svevo (identità, protagonista tipo, reazione alla crisi, tecnica narrativa, finale, ruolo del caso, tecnologia, follia).</p>
+<textarea placeholder="PIRANDELLO | SVEVO&#10;Identità: forma/vita | io malato&#10;Protagonista: Mattia Pascal / Belluca | Zeno&#10;Reazione: ... | ...&#10;Tecnica: umorismo | ...&#10;Finale: ... | ...&#10;Caso: ... | ...&#10;Tecnologia: tram | ...&#10;Follia: ... | ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>47. (Ripetizione) Quali sono le 3 differenze PIÙ IMPORTANTI tra Pirandello e Svevo?</p>
+<textarea placeholder="1) ... 2) ... 3) ..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 7: UNGARETTI ============ -->
+<div class="section">
+<h2>7. GIUSEPPE UNGARETTI</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>48. Dove nasce Ungaretti? Dove trascorre infanzia e giovinezza? Dove combatte in guerra?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>49. Come nasce L'Allegria? Perché le poesie sono così brevi? Quali sono le tre edizioni della raccolta?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>50. Quali sono le innovazioni formali di Ungaretti? (almeno 4). E quali sono invece gli elementi di tradizione?</p>
+<textarea placeholder="Innovazioni: 1) ... 2) ... 3) ... 4) ... / Tradizione: 1) ... 2) ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>51. Analizza FRATELLI: quando e dove è scritta? Cosa significa la parola "fratelli"? Perché è una "involontaria rivolta"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>52. Analizza VEGLIA: cosa fa Ungaretti accanto al compagno morto? Cosa significa "Non sono mai stato tanto attaccato alla vita"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>53. Analizza I FIUMI: elenca i 4 fiumi con i luoghi corrispondenti. Cosa significa l'aggettivo "questo"? Qual è il percorso del poeta?</p>
+<textarea placeholder="1) ... 2) ... 3) ... 4) ... / 'Questo' significa: ... / Percorso: ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>54. (Ripetizione) Perché la poesia di Ungaretti è "poesia PURA"? Cosa aspira a raggiungere?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>55. Perché l'essenzialità (poche parole) in Ungaretti produce ricchezza qualitativa? Spiega il rapporto quantità/qualità.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 8: SABA ============ -->
+<div class="section">
+<h2>8. UMBERTO SABA</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>56. Dove nasce Saba? Qual è il suo rapporto con la madre e col padre?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>57. Cos'è il Canzoniere? Perché Saba usa una forma TRADIZIONALE (sonetti, arcaismi) ma contenuti MODERNI (psicoanalisi)?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>58. Spiega la differenza tra POESIA ONESTA (Saba) e POESIA PURA (Ungaretti).</p>
+<textarea placeholder="Poesia onesta: ... / Poesia pura: ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>59. Analizza AMAI: cosa ama Saba? Cosa significa "La verità che fa male ma che può diventare amica"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>60. Analizza MIO PADRE È STATO PER ME L'ASSASSINO: perché questo titolo? Cosa scopre Saba del padre? Cosa rappresenta il "pallone che sfugge alla mamma"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>61. Qual è il "dono" che Saba ha ricevuto dal padre? Perché la madre gliel'ha sempre fatto vedere come un difetto?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>62. Quali elementi TRADIZIONALI e quali elementi MODERNI ci sono nella poesia di Saba? Fai esempi concreti.</p>
+<textarea placeholder="Tradizionali: ... / Moderni: ..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 9: CONFRONTO UNGARETTI-SABA ============ -->
+<div class="section">
+<h2>9. CONFRONTO UNGARETTI vs SABA</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>63. COMPILA LA TABELLA: Ungaretti vs Saba (forma, contenuto, tipo di poesia, figura del poeta, linguaggio, modelli).</p>
+<textarea placeholder="UNGARETTI | SABA&#10;Forma: rivoluzionaria | tradizionale&#10;Contenuto: guerra, assoluto | ...&#10;Tipo: poesia pura | ...&#10;Figura: ... | ...&#10;Linguaggio: ... | ...&#10;Modelli: ... | ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>64. (Ripetizione) Quali sono le 3 differenze più importanti tra Ungaretti e Saba?</p>
+<textarea placeholder="1) ... 2) ... 3) ..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 10: FILO ROSSO e COLLEGAMENTI ============ -->
+<div class="section">
+<h2>10. FILO ROSSO DEL PROGRAMMA + COLLEGAMENTI</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>65. Disegna il "filo rosso" del programma: collega Positivismo → Naturalismo → Verismo → Decadentismo → Rottura epistemologica → Avanguardie/Modernismo → Arte della crisi. (Scrivi il percorso in 10-15 righe).</p>
+<textarea placeholder="Il programma parte dal Positivismo, corrente che..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>66. Collega Freud a Pirandello e Svevo. Quali concetti freudiani compaiono nelle loro opere?</p>
+<textarea placeholder="Pirandello: ... / Svevo: ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>67. Collega la crisi dell'io (Pirandello/Svevo) alla rottura epistemologica (Freud, Nietzsche, Bergson).</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>68. Collega Ungaretti alla Prima Guerra Mondiale (Storia).</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>69. Quali collegamenti interdisciplinari puoi fare per Pirandello? (minimo 3 materie).</p>
+<textarea placeholder="1) ... 2) ... 3) ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>70. Quali collegamenti interdisciplinari puoi fare per Svevo? (minimo 3 materie).</p>
+<textarea placeholder="1) ... 2) ... 3) ..."></textarea>
+</div>
+</div>
+
+<div class="btns">
+    <button class="btn-save" onclick="saveAnswers()">💾 Salva risposte (localStorage)</button>
+    <button class="btn-save" onclick="exportToFile()">📥 Esporta risposte (file .txt)</button>
+    <button class="btn-print" onclick="window.print()">🖨️ Stampa</button>
+    <button class="btn-reset" onclick="if(confirm('Cancellare tutte le risposte?'))resetAnswers()">🗑️ Resetta</button>
+</div>
+<p class="saved-msg" id="savedMsg">✅ Risposte salvate!</p>
+</div>
+
+<script>
+const STORAGE_KEY = 'verifica4_risposte';
+
+function saveAnswers() {
+    const answers = [];
+    document.querySelectorAll('.question').forEach((q) => {
+        const ta = q.querySelector('textarea, input[type="text"]');
+        if (ta) answers.push(ta.value);
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(answers));
+    const msg = document.getElementById('savedMsg');
+    msg.style.display = 'block';
+    setTimeout(() => msg.style.display = 'none', 2000);
+}
+
+function loadAnswers() {
+    const data = localStorage.getItem(STORAGE_KEY);
+    if (!data) return;
+    const answers = JSON.parse(data);
+    document.querySelectorAll('.question').forEach((q, i) => {
+        const ta = q.querySelector('textarea, input[type="text"]');
+        if (ta && answers[i]) ta.value = answers[i];
+    });
+}
+
+function resetAnswers() {
+    document.querySelectorAll('.question textarea, .question input[type="text"]').forEach(ta => ta.value = '');
+    localStorage.removeItem(STORAGE_KEY);
+}
+
+function toggleMark(el) { el.classList.toggle('marked'); }
+function markAll(state) { document.querySelectorAll('.question').forEach(q => { if (state) q.classList.add('marked'); else q.classList.remove('marked'); }); }
+
+function exportToFile() {
+    let txt = '';
+    document.querySelectorAll('.question').forEach((q, i) => {
+        const ta = q.querySelector('textarea, input[type="text"]');
+        const label = q.querySelector('p');
+        if (ta && label) {
+            txt += '===' + label.textContent.trim() + '===\n';
+            txt += ta.value + '\n\n';
+        }
+    });
+    const blob = new Blob([txt], {type: 'text/plain'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'risposte-verifica4.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+setInterval(saveAnswers, 15000);
+window.addEventListener('load', loadAnswers);
+</script>
+</body>
+</html>

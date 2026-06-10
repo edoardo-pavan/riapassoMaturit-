@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verifica 3 – Novecento, Crisi Europea, Proust, Kafka</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; padding: 20px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1 { text-align: center; color: #2c3e50; margin-bottom: 8px; font-size: 1.8em; }
+    .subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-style: italic; }
+    .section { background: #fff; border-radius: 12px; padding: 25px 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .section h2 { color: #e67e22; border-bottom: 2px solid #f39c12; padding-bottom: 8px; margin-bottom: 20px; font-size: 1.3em; }
+    .question { margin-bottom: 20px; padding: 12px; background: #f8f9fa; border-radius: 6px; border-left: 4px solid #f39c12; }
+    .question p { font-weight: 600; margin-bottom: 8px; }
+    .question textarea { width: 100%; min-height: 80px; padding: 10px; border: 1px solid #dcdde1; border-radius: 6px; font-family: inherit; font-size: 0.95em; resize: vertical; }
+    .question textarea:focus { outline: none; border-color: #f39c12; box-shadow: 0 0 0 2px rgba(243,156,18,0.2); }
+    .question input[type="text"] { width: 100%; padding: 10px; border: 1px solid #dcdde1; border-radius: 6px; font-family: inherit; font-size: 0.95em; }
+    .question input[type="text"]:focus { outline: none; border-color: #f39c12; box-shadow: 0 0 0 2px rgba(243,156,18,0.2); }
+    .btns { text-align: center; margin: 30px 0 60px; }
+    .btns button { padding: 12px 30px; font-size: 1em; border: none; border-radius: 8px; cursor: pointer; margin: 0 10px; font-weight: 600; }
+    .btn-save { background: #27ae60; color: #fff; }
+    .btn-save:hover { background: #219a52; }
+    .btn-print { background: #e67e22; color: #fff; }
+    .btn-print:hover { background: #d35400; }
+    .btn-reset { background: #e74c3c; color: #fff; }
+    .btn-reset:hover { background: #c0392b; }
+    .controls { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+    .controls button { padding: 8px 18px; font-size: 0.85em; border: 2px solid #bdc3c7; border-radius: 6px; cursor: pointer; background: #fff; }
+    .question.marked { background: #fdebd0; border-left-color: #f39c12; }
+    .saved-msg { text-align: center; color: #27ae60; font-weight: 600; margin-top: 10px; display: none; }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .section { box-shadow: none; break-inside: avoid; border: 1px solid #ddd; }
+        .btns, .controls { display: none; }
+        textarea, input[type="text"] { border: 1px solid #ccc; background: #fff; min-height: 60px; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>✍️ Verifica 3 — Novecento, Crisi Europea, Proust, Kafka</h1>
+<p class="subtitle">Basato su: 3-novecento-crisi-europa.md</p>
+
+<div class="controls">
+    <button onclick="markAll(true)">✅ Segna tutti</button>
+    <button onclick="markAll(false)">⬜ Deseleziona tutti</button>
+</div>
+
+<!-- ============ SEZIONE 1: ROTTURA EPISTEMOLOGICA ============ -->
+<div class="section">
+<h2>1. LA ROTTURA EPISTEMOLOGICA</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>1. Chi sono i tre "maestri del sospetto"? Per ciascuno, spiega il suo contributo alla crisi delle certezze.</p>
+<textarea placeholder="1) ... 2) ... 3) ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>2. Freud: spiega ES, IO e SUPER-IO. Come interagiscono tra loro? Quali parti sono inconsce?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>3. Cos'è il transfert e il contro-transfert? Fai un esempio (anche inventato).</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>4. Cos'è un "atto mancato"? Fai un esempio concreto.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>5. (Ripetizione) Spiega di nuovo ES, IO, SUPER-IO — questa volta con la metafora dell'iceberg.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>6. Bergson: qual è la differenza tra tempo dell'orologio e tempo interiore (durata reale)?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>7. Quali contributi hanno dato Einstein e Planck alla rottura delle certezze?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>8. COMPILA LA TABELLA "prima vs dopo la rottura epistemologica" (conoscenza, morale, io, tempo, spazio, realtà).</p>
+<textarea placeholder="PRIMA | DOPO&#10;Conoscenza: logica e scienza | nulla è certo&#10;Morale: ... | ...&#10;Io: ... | ...&#10;Tempo: ... | ...&#10;Spazio: ... | ...&#10;Realtà: ... | ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>9. Oltre ai fattori filosofico-scientifici, quali eventi storici alimentano la crisi dell'uomo del primo Novecento?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>10. (Ripetizione) Perché l'individuo entra in crisi nella società di massa? Cosa significa indossare una maschera che non lo rappresenta?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>11. Perché il Positivismo "garantiva che tutto sarebbe andato bene" — e invece così non fu?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 2: AVANGUARDIE ============ -->
+<div class="section">
+<h2>2. LE AVANGUARDIE STORICHE</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>12. Cosa significa il termine "avanguardia"? Perché questi movimenti si chiamano così?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>13. Cosa accomuna tutte le avanguardie? (atteggiamento, strumenti di comunicazione, volontà)</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>14. Elenca le 5 principali avanguardie e per ciascuna scrivi focus + esempio/manifestazione.</p>
+<textarea placeholder="Espressionismo: ... / Cubismo: ... / Futurismo: ... / Surrealismo: ... / Dadaismo: ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>15. FUTURISMO: elenca i punti chiave del Manifesto di Marinetti (almeno 6). Cosa vogliono distruggere?</p>
+<textarea placeholder="1) ... 2) ... 3) ... 4) ... 5) ... 6) ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>16. Che rapporto c'è tra Futurismo e fascismo? E tra Marinetti e Mussolini?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>17. (Ripetizione) "Un'automobile ruggente è più bella della Nike di Samotracia" — cosa significa questa frase? Perché è emblematica del Futurismo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>18. Cosa sono le "parole in libertà"? Quali regole della sintassi aboliscono i futuristi?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 3: MODERNISMO ============ -->
+<div class="section">
+<h2>3. MODERNISMO e FLUSSO DI COSCIENZA</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>19. Cos'è il Modernismo? In cosa si differenzia dalle avanguardie?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>20. Cos'è il flusso di coscienza (stream of consciousness)? Quale scoperta di Freud ne è il fondamento?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>21. Qual è la differenza tra il flusso di coscienza di Virginia Woolf e quello di James Joyce?</p>
+<textarea placeholder="Woolf: ... / Joyce: ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>22. (Ripetizione) Perché il flusso di coscienza non ha un ordine logico? Cosa cerca di restituire?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 4: PROUST ============ -->
+<div class="section">
+<h2>4. MARCEL PROUST — Alla ricerca del tempo perduto</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>23. Come si chiama l'opera monumentale di Proust? Quanti romanzi la compongono?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>24. Spiega la differenza tra MEMORIA VOLONTARIA e MEMORIA INVOLONTARIA.</p>
+<textarea placeholder="Volontaria: ... / Involontaria: ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>25. Cosa sono le "intermittenze del cuore"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>26. Racconta l'episodio della MADELEINE: chi è il protagonista, cosa fa, cosa scatena il ricordo, cosa riaffiora.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>27. (Ripetizione) Quali sono le 3 fasi del processo di memoria nell'episodio della madeleine?</p>
+<textarea placeholder="1) ... 2) ... 3) ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>28. Perché i sensi sono più potenti della ragione nel recuperare il passato, secondo Proust?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>29. Qual è il rapporto tra Proust e Bergson? Quale concetto di Bergson influenza la Recherche?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>30. Perché la Recherche non segue l'ordine cronologico? Quale ordine segue?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 5: KAFKA ============ -->
+<div class="section">
+<h2>5. FRANZ KAFKA — La Metamorfosi</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>31. Racconta la trama completa de La Metamorfosi. Chi è Gregor Samsa? In cosa si trasforma?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>32. Qual è la PRIMA preoccupazione di Gregor dopo essersi svegliato insetto? Perché questo è assurdo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>33. Perché Gregor NON SI CHIEDE MAI il perché della trasformazione? Cosa significa questo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>34. Come reagiscono i familiari di Gregor alla sua trasformazione? (padre, madre, sorella, affittuari)</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>35. Come muore Gregor? Chi lo butta via?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>36. (Ripetizione) Racconta di nuovo la trama della Metamorfosi, concentrandoti sul finale.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>37. Cos'è L'ALLEGORIA VUOTA? Perché la Metamorfosi è un'allegoria vuota?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>38. Che cos'è una "situazione kafkiana"? Descrivila e fai un esempio.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>39. Elenca le possibili interpretazioni della Metamorfosi (almeno 3).</p>
+<textarea placeholder="1) ... 2) ... 3) ..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>40. Quali sono gli elementi tipici di Kafka? (assurdo, inetto, colpa senza crimine, allegoria vuota — spiegali tutti)</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>41. CONFRONTO: Gregor (Kafka) vs Mattia Pascal (Pirandello) vs Zeno (Svevo) — che tipo di protagonista sono? Cosa li accomuna?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ============ SEZIONE 6: COLLEGAMENTI ============ -->
+<div class="section">
+<h2>6. COLLEGAMENTI INTERDISCIPLINARI</h2>
+
+<div class="question" onclick="toggleMark(this)">
+<p>42. Collega Freud alla Coscienza di Zeno di Svevo. Quali concetti freudiani compaiono nel romanzo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>43. Collega il flusso di coscienza a Joyce (inglese) e Bergson (filosofia).</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>44. Collega il Futurismo al Fascismo (storia).</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" onclick="toggleMark(this)">
+<p>45. Collega Einstein e la relatività alla perdita delle certezze nel primo Novecento.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<div class="btns">
+    <button class="btn-save" onclick="saveAnswers()">💾 Salva risposte (localStorage)</button>
+    <button class="btn-save" onclick="exportToFile()">📥 Esporta risposte (file .txt)</button>
+    <button class="btn-print" onclick="window.print()">🖨️ Stampa</button>
+    <button class="btn-reset" onclick="if(confirm('Cancellare tutte le risposte?'))resetAnswers()">🗑️ Resetta</button>
+</div>
+<p class="saved-msg" id="savedMsg">✅ Risposte salvate!</p>
+</div>
+
+<script>
+const STORAGE_KEY = 'verifica3_risposte';
+
+function saveAnswers() {
+    const answers = [];
+    document.querySelectorAll('.question').forEach((q) => {
+        const ta = q.querySelector('textarea, input[type="text"]');
+        if (ta) answers.push(ta.value);
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(answers));
+    const msg = document.getElementById('savedMsg');
+    msg.style.display = 'block';
+    setTimeout(() => msg.style.display = 'none', 2000);
+}
+
+function loadAnswers() {
+    const data = localStorage.getItem(STORAGE_KEY);
+    if (!data) return;
+    const answers = JSON.parse(data);
+    document.querySelectorAll('.question').forEach((q, i) => {
+        const ta = q.querySelector('textarea, input[type="text"]');
+        if (ta && answers[i]) ta.value = answers[i];
+    });
+}
+
+function resetAnswers() {
+    document.querySelectorAll('.question textarea, .question input[type="text"]').forEach(ta => ta.value = '');
+    localStorage.removeItem(STORAGE_KEY);
+}
+
+function toggleMark(el) { el.classList.toggle('marked'); }
+function markAll(state) { document.querySelectorAll('.question').forEach(q => { if (state) q.classList.add('marked'); else q.classList.remove('marked'); }); }
+
+function exportToFile() {
+    let txt = '';
+    document.querySelectorAll('.question').forEach((q, i) => {
+        const ta = q.querySelector('textarea, input[type="text"]');
+        const label = q.querySelector('p');
+        if (ta && label) {
+            txt += '===' + label.textContent.trim() + '===\n';
+            txt += ta.value + '\n\n';
+        }
+    });
+    const blob = new Blob([txt], {type: 'text/plain'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'risposte-verifica3.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+setInterval(saveAnswers, 15000);
+window.addEventListener('load', loadAnswers);
+</script>
+</body>
+</html>

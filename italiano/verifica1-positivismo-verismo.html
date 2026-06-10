@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verifica 1 – Positivismo, Naturalismo, Verismo, Verga</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #1a1a1a; line-height: 1.6; padding: 20px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1 { text-align: center; color: #2c3e50; margin-bottom: 8px; font-size: 1.8em; }
+    .subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-style: italic; }
+    .section { background: #fff; border-radius: 12px; padding: 25px 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .section h2 { color: #2980b9; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 20px; font-size: 1.3em; }
+    .question { margin-bottom: 20px; padding: 12px; background: #f8f9fa; border-radius: 6px; border-left: 4px solid #3498db; }
+    .question p { font-weight: 600; margin-bottom: 8px; }
+    .question textarea { width: 100%; min-height: 80px; padding: 10px; border: 1px solid #dcdde1; border-radius: 6px; font-family: inherit; font-size: 0.95em; resize: vertical; }
+    .question textarea:focus { outline: none; border-color: #3498db; box-shadow: 0 0 0 2px rgba(52,152,219,0.2); }
+    .question input[type="text"] { width: 100%; padding: 10px; border: 1px solid #dcdde1; border-radius: 6px; font-family: inherit; font-size: 0.95em; }
+    .question input[type="text"]:focus { outline: none; border-color: #3498db; box-shadow: 0 0 0 2px rgba(52,152,219,0.2); }
+    .hint { font-size: 0.8em; color: #95a5a6; margin-top: 4px; }
+    .btns { text-align: center; margin: 30px 0 60px; }
+    .btns button { padding: 12px 30px; font-size: 1em; border: none; border-radius: 8px; cursor: pointer; margin: 0 10px; font-weight: 600; }
+    .btn-save { background: #27ae60; color: #fff; }
+    .btn-save:hover { background: #219a52; }
+    .btn-print { background: #2980b9; color: #fff; }
+    .btn-print:hover { background: #2471a3; }
+    .btn-reset { background: #e74c3c; color: #fff; }
+    .btn-reset:hover { background: #c0392b; }
+    .controls { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+    .controls button { padding: 8px 18px; font-size: 0.85em; border: 2px solid #bdc3c7; border-radius: 6px; cursor: pointer; background: #fff; }
+    .controls button.marked { background: #fdebd0; border-color: #f39c12; }
+    .saved-msg { text-align: center; color: #27ae60; font-weight: 600; margin-top: 10px; display: none; }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .section { box-shadow: none; break-inside: avoid; border: 1px solid #ddd; }
+        .btns, .controls { display: none; }
+        textarea, input[type="text"] { border: 1px solid #ccc; background: #fff; min-height: 60px; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>✍️ Verifica 1 — Positivismo, Naturalismo, Verismo, Verga</h1>
+<p class="subtitle">Basato su: 1-positivismo-verismo.md | Compila ogni campo con cura. La ridondanza è voluta: ripetere aiuta a fissare.</p>
+
+<div class="controls">
+    <button onclick="markAll(true)">✅ Segna tutti</button>
+    <button onclick="markAll(false)">⬜ Deseleziona tutti</button>
+    <span style="font-size:0.85em;color:#7f8c8d;line-height:2.2;">(click su una domanda per segnarla come "da ripassare")</span>
+</div>
+
+<!-- ==================== SEZIONE 1: POSITIVISMO ==================== -->
+<div class="section" id="sec1">
+<h2>1. IL POSITIVISMO</h2>
+
+<div class="question" id="q1" onclick="toggleMark(this)">
+<p>1. Quali sono i quattro pilastri del Positivismo? Descrivili brevemente.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q2" onclick="toggleMark(this)">
+<p>2. Chi è il "borghese positivista"? Quali sono i suoi canoni di comportamento? (Ripetizione voluta: anche nella domanda 3)</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q3" onclick="toggleMark(this)">
+<p>3. Il borghese positivista — descrivilo ancora, con parole tue. Quali valori incarna e perché la rispettabilità è tutto?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q4" onclick="toggleMark(this)">
+<p>4. Spiega il concetto di "determinismo". Quale filosofo lo ha teorizzato e quali sono i suoi 3 fattori?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q5" onclick="toggleMark(this)">
+<p>5. Qual è il rapporto del Positivismo con la religione? Cosa pensano i positivisti della Bibbia?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q6" onclick="toggleMark(this)">
+<p>6. Perché l'uomo del Positivismo è "un uomo che schiaccia"? Cosa significa questa espressione?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ==================== SEZIONE 2: FLAUBERT ==================== -->
+<div class="section" id="sec2">
+<h2>2. FLAUBERT E MADAME BOVARY</h2>
+
+<div class="question" id="q7" onclick="toggleMark(this)">
+<p>7. Riassumi la trama di Madame Bovary (chi è Emma, cosa sogna, chi sposa, come finisce).</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q8" onclick="toggleMark(this)">
+<p>8. Quali furono le tre ragioni per cui Madame Bovary fu scandaloso e finì sotto processo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q9" onclick="toggleMark(this)">
+<p>9. Cos'è il DIL (Discorso Indiretto Libero)? Scrivi un esempio con: discorso diretto, discorso indiretto, discorso indiretto libero (inventa una frase qualsiasi).</p>
+<textarea placeholder="DD: ... / DI: ... / DIL: ..."></textarea>
+</div>
+
+<div class="question" id="q10" onclick="toggleMark(this)">
+<p>10. Cos'è il "bovarismo"? Spiegalo con parole tue.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q11" onclick="toggleMark(this)">
+<p>11. (Ripetizione) Spiega di nuovo il DIL. Perché è la grande innovazione tecnica di Flaubert? Cosa permette di fare?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q12" onclick="toggleMark(this)">
+<p>12. In cosa consiste l'IMPERSONALITÀ di Flaubert? Il narratore è giudicante o no?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ==================== SEZIONE 3: ZOLA E NATURALISMO ==================== -->
+<div class="section" id="sec3">
+<h2>3. ZOLA E IL NATURALISMO FRANCESE</h2>
+
+<div class="question" id="q13" onclick="toggleMark(this)">
+<p>13. Chi è Taine? Quali sono i tre fattori che secondo lui determinano l'esistenza di ogni individuo?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q14" onclick="toggleMark(this)">
+<p>14. Cos'è "Il romanzo sperimentale" di Zola? Elenca i punti principali della sua poetica (almeno 4).</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q15" onclick="toggleMark(this)">
+<p>15. Perché Zola dice che lo scrittore è "come uno scienziato in laboratorio"? Cosa significa?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q16" onclick="toggleMark(this)">
+<p>16. Qual è la trama de L'Ammazzatoio (L'Assommoir)? Chi è la protagonista e cosa le succede?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q17" onclick="toggleMark(this)">
+<p>17. (Ripetizione) Elenca di nuovo i punti principali del Romanzo Sperimentale. Non importa se ti ripeti.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ==================== SEZIONE 4: VERISMO ==================== -->
+<div class="section" id="sec4">
+<h2>4. IL VERISMO ITALIANO — NASCITA E CARATTERI</h2>
+
+<div class="question" id="q18" onclick="toggleMark(this)">
+<p>18. Quando nasce il Verismo italiano? Quale opera segna convenzionalmente la sua nascita?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q19" onclick="toggleMark(this)">
+<p>19. Chi sono i due fondatori del Verismo? Da dove venivano e dove si trovavano?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q20" onclick="toggleMark(this)">
+<p>20. Quali sono le due influenze principali che portarono al Verismo italiano? Spiegale entrambe.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q21" onclick="toggleMark(this)">
+<p>21. Qual è la differenza tra Zola (Naturalismo) e Verga (Verismo) riguardo alla visione del progresso? Spiega con la metafora della fiumana.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q22" onclick="toggleMark(this)">
+<p>22. TABELLA: Confronto Naturalismo vs Verismo. Compila almeno 3 differenze.</p>
+<textarea placeholder="Naturalismo: ... / Verismo: ..."></textarea>
+</div>
+
+<div class="question" id="q23" onclick="toggleMark(this)">
+<p>23. (Ripetizione tabella) Naturalismo vs Verismo: altre differenze che non hai ancora scritto.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ==================== SEZIONE 5: VERGA ==================== -->
+<div class="section" id="sec5">
+<h2>5. VERGA — VITA, IMPERSONALITÀ, CICLO DEI VINTI</h2>
+
+<div class="question" id="q24" onclick="toggleMark(this)">
+<p>24. Quando e dove nasce Verga? In quale anno avviene la sua "svolta verista"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q25" onclick="toggleMark(this)">
+<p>25. Spiega l'impersonalità verghiana. Cosa significa "narratore regredito"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q26" onclick="toggleMark(this)">
+<p>26. Cos'è lo "straniamento" in Verga? Fai un esempio da Rosso Malpelo.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q27" onclick="toggleMark(this)">
+<p>27. (Ripetizione) Differenza tra impersonalità di Flaubert e impersonalità di Verga.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q28" onclick="toggleMark(this)">
+<p>28. Quali sono i 5 romanzi previsti nel Ciclo dei Vinti? Quali furono effettivamente scritti?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q29" onclick="toggleMark(this)">
+<p>29. Perché il ciclo si chiama "dei Vinti" e non "della Marea"? Spiega il cambio di titolo e il suo significato.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q30" onclick="toggleMark(this)">
+<p>30. Spiega la metafora della "fiumana del progresso" nella Prefazione ai Malavoglia. Cosa si vede da lontano e cosa da vicino?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q31" onclick="toggleMark(this)">
+<p>31. (Ripetizione) Cos'è la fiumana del progresso? Perché Verga ha una visione critica del progresso mentre Zola ne ha una positiva?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ==================== SEZIONE 6: MALAVOGLIA ==================== -->
+<div class="section" id="sec6">
+<h2>6. I MALAVOGLIA</h2>
+
+<div class="question" id="q32" onclick="toggleMark(this)">
+<p>32. Elenca tutti i componenti della famiglia Malavoglia e per ciascuno scrivi il ruolo/una caratteristica.</p>
+<textarea placeholder="Padron 'Ntoni: ... / Bastianazzo: ... / La Longa: ... / 'Ntoni il giovane: ... / Luca: ... / Mena: ... / Alessi: ... / Lia: ..."></textarea>
+</div>
+
+<div class="question" id="q33" onclick="toggleMark(this)">
+<p>33. Qual è il vero cognome della famiglia? Perché vengono chiamati "Malavoglia"?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q34" onclick="toggleMark(this)">
+<p>34. Riassumi la trama de I Malavoglia in ordine cronologico (partenza di 'Ntoni → commercio lupini → naufragio → ecc.).</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q35" onclick="toggleMark(this)">
+<p>35. Perché 'Ntoni il giovane va in galera? Racconta l'episodio con don Michele e Lia.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q36" onclick="toggleMark(this)">
+<p>36. Spiega i "due mondi" nei Malavoglia: mondo epico vs mondo romanzesco. Chi rappresenta ciascuno?</p>
+<textarea placeholder="Mondo epico: ... / Mondo romanzesco: ..."></textarea>
+</div>
+
+<div class="question" id="q37" onclick="toggleMark(this)">
+<p>37. Come finisce il romanzo? Cosa fa 'Ntoni quando torna dal carcere?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q38" onclick="toggleMark(this)">
+<p>38. (Ripetizione) Perché 'Ntoni è un personaggio "misto" tra epico e romanzesco? Spiega.</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ==================== SEZIONE 7: NOVELLE ==================== -->
+<div class="section" id="sec7">
+<h2>7. LE NOVELLE VERISTE</h2>
+
+<div class="question" id="q39" onclick="toggleMark(this)">
+<p>39. Riassumi Rosso Malpelo. Chi è il protagonista? Perché si chiama così? In che ambiente vive?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q40" onclick="toggleMark(this)">
+<p>40. Riassumi La Lupa. Chi è la protagonista? Cosa fa? Come finisce la novella?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q41" onclick="toggleMark(this)">
+<p>41. Nella Lupa, il narratore dice esplicitamente che Nanni cede alle avances? Come viene comunicato al lettore?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q42" onclick="toggleMark(this)">
+<p>42. Riassumi La Roba. Chi è Mazzarò? Cosa fa in punto di morte? Qual è il messaggio della novella?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q43" onclick="toggleMark(this)">
+<p>43. Che cos'hanno in comune le tre novelle (Rosso Malpelo, La lupa, La roba) dal punto di vista della tecnica narrativa?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+</div>
+
+<!-- ==================== SEZIONE 8: COLLEGAMENTI ==================== -->
+<div class="section" id="sec8">
+<h2>8. COLLEGAMENTI INTERDISCIPLINARI</h2>
+
+<div class="question" id="q44" onclick="toggleMark(this)">
+<p>44. Quali collegamenti puoi fare tra il Positivismo e la Storia (Seconda Rivoluzione Industriale)?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q45" onclick="toggleMark(this)">
+<p>45. Qual è il collegamento tra il Ciclo dei Vinti di Verga e la teoria dell'evoluzione di Darwin?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q46" onclick="toggleMark(this)">
+<p>46. Che collegamento c'è tra Rosso Malpelo e l'Inchiesta Franchetti-Sonnino?</p>
+<textarea placeholder="Scrivi qui la tua risposta..."></textarea>
+</div>
+
+<div class="question" id="q47" onclick="toggleMark(this)">
+<p>47. Quali collegamenti interdisciplinari puoi fare per il Verismo (minimo 2, materia + spiegazione)?</p>
+<textarea placeholder="1) ... / 2) ..."></textarea>
+</div>
+</div>
+
+<div class="btns">
+    <button class="btn-save" onclick="saveAnswers()">💾 Salva risposte (localStorage)</button>
+    <button class="btn-save" onclick="exportToFile()">📥 Esporta risposte (file .txt)</button>
+    <button class="btn-print" onclick="window.print()">🖨️ Stampa</button>
+    <button class="btn-reset" onclick="if(confirm('Cancellare tutte le risposte?'))resetAnswers()">🗑️ Resetta</button>
+</div>
+<p class="saved-msg" id="savedMsg">✅ Risposte salvate!</p>
+</div>
+
+<script>
+// Salva/ripristina risposte in localStorage
+const STORAGE_KEY = 'verifica1_risposte';
+
+function saveAnswers() {
+    const answers = [];
+    document.querySelectorAll('.question').forEach((q, i) => {
+        const ta = q.querySelector('textarea, input[type="text"]');
+        if (ta) answers.push(ta.value);
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(answers));
+    const msg = document.getElementById('savedMsg');
+    msg.style.display = 'block';
+    setTimeout(() => msg.style.display = 'none', 2000);
+}
+
+function loadAnswers() {
+    const data = localStorage.getItem(STORAGE_KEY);
+    if (!data) return;
+    const answers = JSON.parse(data);
+    document.querySelectorAll('.question').forEach((q, i) => {
+        const ta = q.querySelector('textarea, input[type="text"]');
+        if (ta && answers[i]) ta.value = answers[i];
+    });
+}
+
+function resetAnswers() {
+    document.querySelectorAll('.question textarea, .question input[type="text"]').forEach(ta => ta.value = '');
+    localStorage.removeItem(STORAGE_KEY);
+}
+
+// Marca domande "da ripassare"
+function toggleMark(el) {
+    el.classList.toggle('marked');
+}
+
+function markAll(state) {
+    document.querySelectorAll('.question').forEach(q => {
+        if (state) q.classList.add('marked'); else q.classList.remove('marked');
+    });
+}
+
+function exportToFile() {
+    let txt = '';
+    document.querySelectorAll('.question').forEach((q, i) => {
+        const ta = q.querySelector('textarea, input[type="text"]');
+        const label = q.querySelector('p');
+        if (ta && label) {
+            txt += '===' + label.textContent.trim() + '===\n';
+            txt += ta.value + '\n\n';
+        }
+    });
+    const blob = new Blob([txt], {type: 'text/plain'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'risposte-verifica1.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+// Autosave ogni 15 secondi
+setInterval(saveAnswers, 15000);
+window.addEventListener('load', loadAnswers);
+</script>
+</body>
+</html>
